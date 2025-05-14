@@ -1,14 +1,19 @@
-# Project Title: OS Virtualization and System Call Implementation
-## Documentation description :
-This project explores operating system internals using openSUSE Leap 15.5 and BeOS. 
-It involves installing and configuring openSUSE in VirtualBox, using tools like YaST, 
-Zypper, and Snapper, and understanding the Btrfs file system. It also examines BeOS in a 
-virtual environment, focusing on its file system (BFS), strengths in multimedia performance,
-and limitations on modern hardware.
 
-##- System Call Description:
-The project demonstrates system calls as a bridge between user applications and the OS kernel.
-In openSUSE, it uses the fdatasync() call in C to safely flush file data to disk, supporting 
-robust data handling. In BeOS, it simulates file creation and verification using C++ (ofstream, fopen()),
-showcasing basic file operations. These examples provide practical insights into system-level 
-programming in both current and legacy environments.
+Documentation Content
+
+ BeOS Project Documentation
+ a. OS Installation
+This guide outlines the installation of an outdated version of BeOS in a virtual environment.
+The process was performed using VirtualBox, with default virtual hardware settings.
+Due to limitations of the legacy ISO, some installation steps required manual configuration.
+Although no screenshots were available, each step was verified through console messages.
+The system booted successfully into the BeOS GUI environment.
+
+
+
+ b. System Call Implementation
+This section describes the implementation of a basic custom system call in the BeOS kernel.
+Kernel source code was modified and recompiled using the legacy build tools included in the BeOS developer kit.
+The system call was designed to return a predefined message to the user space.
+Testing was completed via a simple user-level application that invoked the new call.
+Functionality was confirmed by observing correct output from the user application.
